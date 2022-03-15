@@ -1,4 +1,4 @@
-package PlayingCards;
+package edu.ntnu.idatt2001.cardgames;
 
 public class PlayingCard {
     private final char suit; // 'S'=spade, 'H'=heart, 'D'=diamonds, 'C'=clubs
@@ -43,5 +43,4 @@ public class PlayingCard {
     public int getFace() {
         return face;
     }
-}
 }
