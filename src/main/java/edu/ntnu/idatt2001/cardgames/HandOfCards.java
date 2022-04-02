@@ -44,4 +44,17 @@ public class HandOfCards {
         ArrayList<PlayingCard> sortedHearts =  handOfCards.stream().filter(p -> p.getSuit() == 'H').collect(Collectors.toCollection(ArrayList::new));
         return sortedHearts.size() == 0 ? "No hearts" : sortedHearts.stream().map(PlayingCard::toString).collect(Collectors.joining(" "));
     }
+
+    public String hasQueenOfSpades() {
+        return handOfCards.stream().anyMatch(p -> p.getSuit() == 'S' && p.getFace() == 1) ? "YES" : "NO";
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (PlayingCard playingcard : handOfCards) {
+            sb.append(playingcard.toString()).append("  ");
+        }
+        return sb.toString();
+    }
 }

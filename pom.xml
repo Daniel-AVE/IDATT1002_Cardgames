@@ -86,7 +86,7 @@
                             <release>${maven.compiler.target}</release>
                             <jlinkImageName>hellofx</jlinkImageName>
                             <launcher>launcher</launcher>
-                            <mainClass>edu.ntnu.idatt2001.cardgames/edu.ntnu.idatt2001.cardgames.HelloApplication
+                            <mainClass>edu.ntnu.idatt2001.cardgames/edu.ntnu.idatt2001.cardgames.Application
                             </mainClass>
                         </configuration>
                     </execution>

@@ -14,9 +14,13 @@ public class DeckOfCards {
         fillDeckWithCards();
     }
 
+    public ArrayList<PlayingCard> getCardsList() {
+        return cardsList;
+    }
+
     public void fillDeckWithCards() {
         for (char suit : suits) {
-            for (int i = 0; i < 14; i++) {
+            for (int i = 1; i < 14; i++) {
                 cardsList.add(new PlayingCard(suit, i));
             }
         }
@@ -34,7 +38,7 @@ public class DeckOfCards {
         Collections.shuffle(cardsList);
     }
 
-    public HandOfCards dealHand(int n) {
+    public ArrayList<PlayingCard> dealHand(int n) {
         Random random = new Random();
         ArrayList<PlayingCard> returnDeck = new ArrayList<>();
         shuffleDeck();
@@ -48,6 +52,6 @@ public class DeckOfCards {
             returnDeck.add(new PlayingCard(card.getSuit(), card.getFace()));
             cardsList.remove(card);
         }
-        return new HandOfCards(returnDeck);
+        return returnDeck;
     }
 }
