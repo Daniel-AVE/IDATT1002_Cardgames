@@ -10,6 +10,11 @@ public class HandOfCardsTest {
 
     private static HandOfCards handOfCards;
 
+    /**
+     * Before running any other method, it runs this method
+     * creates a manual deck of cards to be used for testing
+     * adds all playingcards to an arraylist handOfCards
+     */
     @BeforeAll
     static void init(){
         PlayingCard p1 = new PlayingCard('S',4);
@@ -22,6 +27,9 @@ public class HandOfCardsTest {
 
     }
 
+    /**
+     * Nests multiple different tests under one category for correct arguments
+     */
     @Nested
     class testWithCorrectArguments{
 
@@ -48,6 +56,10 @@ public class HandOfCardsTest {
             assertEquals("No flush", handOfCards.isFlush());
         }
     }
+
+    /**
+     * Nests tests under one category for false arguments
+     */
     @Nested
     class testWithFalseArguments{
         @Test

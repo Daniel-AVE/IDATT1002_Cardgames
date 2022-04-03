@@ -9,10 +9,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class DeckOfCardsTest {
     private static DeckOfCards deckOfCards;
 
+    /**
+     * Before running all other test methods, it runs this method for initializing
+     * creates a new deckOfCards
+     */
     @BeforeAll
     static void init(){
         deckOfCards = new DeckOfCards();
     }
+
     @Test
     @DisplayName("Test that checks correct amount of cards in deck")
     public void getCards_listWithCardsGiven_ExpectedCorrectSize(){
