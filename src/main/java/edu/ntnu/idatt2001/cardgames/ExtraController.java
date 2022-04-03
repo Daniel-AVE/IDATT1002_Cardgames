@@ -50,6 +50,8 @@ public class ExtraController {
         checkButton.setDisable(true);
         dealButton.setDisable(false);
         StringBuilder sb = new StringBuilder();
+        sb.append("Hand: ");
+        sb.append(handOfCards.toString()).append("\n");
         sb.append("Sum of cards: ");
         sb.append(handOfCards.sumOfFaces()).append("\n");
         sb.append("Hearts: ");

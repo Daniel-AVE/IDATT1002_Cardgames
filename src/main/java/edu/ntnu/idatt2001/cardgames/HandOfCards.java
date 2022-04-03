@@ -36,17 +36,13 @@ public class HandOfCards {
                 handOfCards.stream().filter(p -> p.getSuit() == 'C').count() >= 5) ? "Flush" : "No flush";
     }
 
-    public String hasQueenSpades() {
-        return handOfCards.stream().anyMatch(p -> p.getSuit() == 'S' && p.getFace() == 1) ? "YES" : "NO";
+    public String hasQueenOfSpades() {
+        return handOfCards.stream().anyMatch(p -> p.getSuit() == 'S' && p.getFace() == 12) ? "YES" : "NO";
     }
 
     public String hasHearts() {
         ArrayList<PlayingCard> sortedHearts =  handOfCards.stream().filter(p -> p.getSuit() == 'H').collect(Collectors.toCollection(ArrayList::new));
         return sortedHearts.size() == 0 ? "No hearts" : sortedHearts.stream().map(PlayingCard::toString).collect(Collectors.joining(" "));
-    }
-
-    public String hasQueenOfSpades() {
-        return handOfCards.stream().anyMatch(p -> p.getSuit() == 'S' && p.getFace() == 1) ? "YES" : "NO";
     }
 
     @Override
